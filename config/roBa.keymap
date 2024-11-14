@@ -22,13 +22,11 @@
         tab {
             bindings = <&kp LG(TAB)>;
             key-positions = <11 12>;
-            layers = <0 2 3 1>;
         };
 
         shift_tab {
             bindings = <&kp LS(LG(TAB))>;
             key-positions = <12 13>;
-            layers = <0 2 3 1>;
         };
 
         muhennkann {
