@@ -5,8 +5,8 @@
 #include <zmk/layer.h>
 
 // トラックボールの移動距離や時間を設定
-#define AUTO_MOUSE_DISTANCE_THRESHOLD 10
-#define AUTO_MOUSE_TIME_THRESHOLD_MS 500
+#define AUTO_MOUSE_DISTANCE_THRESHOLD 1000
+#define AUTO_MOUSE_TIME_THRESHOLD_MS 1000
 
 static int total_movement = 0;
 static int64_t last_movement_time = 0;
