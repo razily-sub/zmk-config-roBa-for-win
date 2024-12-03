@@ -9,6 +9,7 @@ static void adjust_mouse_speed(int16_t *x, int16_t *y) {
     int16_t movement_size = abs(*x) + abs(*y);
     float speed_multiplier = 1.0;
 
+    // 動きの大きさに応じて速度倍率を調整
     if (movement_size > 60) {
         speed_multiplier = 3.0;
     } else if (movement_size > 30) {
@@ -39,6 +40,11 @@ static int sensor_event_handler(const struct zmk_event_header *eh) {
     // マウススピード調整関数を適用
     adjust_mouse_speed(&x, &y);
 
+    // 必要に応じて軸反転（例: 左右モジュールで異なる処理が必要ならここに実装）
+    // x = -x;
+    // y = -y;
+
+    // マウス動作として反映
     zmk_mouse_move(x, y);
     return 0;
 }
