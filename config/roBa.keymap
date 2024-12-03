@@ -10,6 +10,33 @@
 #define SCROLL 5
 #define NUM 6
 
+////
+
+#define MOUSE_LAYER_ACTIVATION_TIME_MS 500  // 有効化までの時間 (ミリ秒)
+
+static int64_t movement_start_time = 0;
+
+void trackball_event_handler(struct device *dev, const struct sensor_trigger *trigger) {
+    if (trackball_is_moving()) {
+        if (movement_start_time == 0) {
+            // トラックボールが動き始めた時間を記録
+            movement_start_time = k_uptime_get();
+        }
+
+        int64_t current_time = k_uptime_get();
+        if ((current_time - movement_start_time) >= MOUSE_LAYER_ACTIVATION_TIME_MS) {
+            activate_layer(AUTO_MOUSE_LAYER);
+            movement_start_time = 0;  // リセット
+        }
+    } else {
+        // トラックボールが停止している場合、時間をリセット
+        movement_start_time = 0;
+    }
+}
+////
+
+
+
 &mt {
     flavor = "balanced";
     quick-tap-ms = <0>;
