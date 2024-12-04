@@ -4,6 +4,8 @@ manifest:
       url-base: https://github.com/petejohanson
     - name: kumamuk-git
       url-base: https://github.com/kumamuk-git
+    - name: razily-sub
+      url-base: https://github.com/razily-sub
   projects:
     - name: zmk
       remote: zmkfirmware
