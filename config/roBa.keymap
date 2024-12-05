@@ -106,7 +106,7 @@
 &kp ESCAPE      &none         &none         &none               &kp LG(UP_ARROW)                                 &kp LC(W)          &kp LA(LEFT_ARROW)  &mkp MB3        &kp LA(RIGHT_ARROW)  &kp HOME
 &kp TAB         &kp LEFT_ALT  &kp LS(TAB)   &kp LG(LEFT_ARROW)  &kp LG(RIGHT_ARROW)  &none            &kp LC(T)  &kp LC(PAGE_UP)    &mkp MB1            &kp UP_ARROW    &mkp MB2             &kp PAGE_UP
 &kp LEFT_SHIFT  &none         &none         &none               &kp LG(DOWN_ARROW)   &none            &none      &kp LC(PAGE_DOWN)  &kp LEFT_ARROW      &kp DOWN_ARROW  &kp RIGHT_ARROW      &kp PAGE_DOWN
-&kp LCTRL       &kp LEFT_WIN  &kp LEFT_ALT  &kp DELETE          &kp ENTER            &kp BACKSPACE    &trans     &trans                                                                      &kp END
+&kp LCTRL       &kp LEFT_WIN  &kp LEFT_ALT  &kp DELETE          &kp ENTER            &kp BACKSPACE    &none      &trans                                                                      &kp END
             >;
 
             sensor-bindings = <&scroll_up_down>;
